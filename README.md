@@ -1,70 +1,112 @@
-# Getting Started with Create React App
+# Flashcard App - Learn Language with Callout Syntax
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This app helps you practice language questions from a markdown file formatted in a specific syntax. You can upload your file, review questions, select answers, and analyze mistakes. Here's how to use the app effectively:
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## **Usage Instructions**
 
-### `npm start`
+### **1. Prepare Your Markdown File**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Create or download an existing markdown file containing questions in the following callout syntax format:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```md
+> [!question] {Question Number} {Your Question Here}
+> a) {Choice 1}
+> b) {Choice 2}
+> c) {Choice 3}
+> d) {Choice 4}
+>
+> > [!success] - Answer
+> > a) {Text of the Correct Answer}
+```
 
-### `npm test`
+Example:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```md
+> [!question] 1. Ich \_\_\_\_ heute viel Arbeit. (haben)
+> a) habe
+> b) hat
+> c) habst
+> d) hatten
+>
+> > [!success] - Answer
+> > a) habe
+```
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### **2. Upload the Markdown File**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Go to [Learn Language Flashcard App](https://kreativethinker.github.io/learn-language).
+- Upload your markdown file (must be in `.md` format) using the upload button on the page.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+### **3. Practice and Review**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- The app will display each question as a flashcard.
+- Select the correct option by clicking the corresponding button.
+- Review your mistakes and analyze the correct answers.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### **4. Upload Another Set**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- To upload a new markdown file with questions, simply **reload the page** and repeat the upload process.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## **Generate a New Markdown File**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+If you want to generate a new set of questions, use the following prompt with any Large Language Model (LLM):
 
-### Code Splitting
+```md
+I want you to generate 60 questions total comprising information from the above pdf in the following format:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+sentence **\_** rest of the sentence.
 
-### Analyzing the Bundle Size
+The blank should be filled by the right pronoun/right form of the word/appropriate word/correctly conjugated word.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+For example:
+Wie Gefallt \_**\_ munchen?
+hast do \_\_** gefragt?
+ich mochte mit \_**\_ freundin ins Kino
+David fliegt flugzeuge. er is \_\_\_**
+Er hat \_\_\_\_ fuller zu hause vergessen?
 
-### Making a Progressive Web App
+They should be in this format:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+> [!question] {Question Number} {Insert your question here}
+> a) {Choice 1}
+> b) {Choice 2}
+> c) {Choice 3}
+> d) {Choice 4}
+>
+> > [!success] - Answer
+> > {Correct Choice ID} {Text of the Correct Choice}
 
-### Advanced Configuration
+For example:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+> [!question] Which of the following is the correct translation of house in Spanish?
+> a) Casa
+> b) Maison
+> c) Haus
+> d) Huis
+>
+> > [!success] - Answer
+> > a) Casa
+```
 
-### Deployment
+1. Provide the topics you want the questions to focus on.
+2. Copy and paste the generated output into a markdown file and upload it to the app.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+### **Features**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Interactive Flashcards**: Dynamically display questions and options.
+- **Automatic Validation**: Check answers instantly with color-coded feedback.
+- **Reload Friendly**: Upload multiple sets with ease by refreshing the page.
+
+Happy learning! 🎉
