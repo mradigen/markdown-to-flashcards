@@ -16,7 +16,7 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://KreativeThinker.github.io/learn-language",
+  "homepage": "https://kreativethinker.github.io/learn-language",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
