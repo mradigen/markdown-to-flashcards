@@ -6,6 +6,7 @@ const App = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const md = new markdownIt();
+  md.options.typographer = true;
 
   const handleFileUpload = (event) => {
     const file = event.target.files[0];
