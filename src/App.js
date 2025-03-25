@@ -61,15 +61,27 @@ const App = () => {
 
   if (questions.length === 0) {
     return (
-      <div className="min-h-screen bg-gray-100 p-4">
-        <h1 className="text-2xl font-bold text-center mb-4">Flashcard App</h1>
-        <input
-          type="file"
-          accept=".md"
-          onChange={handleFileUpload}
-          className="mb-4 p-2 border rounded"
-        />
-        <p className="text-center">Upload a markdown file to get started.</p>
+      <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-6">
+        <h1 className="text-3xl font-extrabold text-gray-800 mb-6">
+          📚 Flashcard App
+        </h1>
+
+        <label className="cursor-pointer flex flex-col items-center justify-center w-64 h-40 bg-white shadow-md rounded-lg border-2 border-dashed border-gray-400 hover:border-blue-500 transition">
+          <input
+            type="file"
+            accept=".md"
+            onChange={handleFileUpload}
+            className="hidden"
+          />
+          <span className="text-gray-600">📂 Click to upload</span>
+          <span className="text-xs text-gray-500 mt-2">
+            Markdown files only
+          </span>
+        </label>
+
+        <p className="mt-4 text-gray-600">
+          Upload a markdown file to get started.
+        </p>
       </div>
     );
   }
