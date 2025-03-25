@@ -79,7 +79,7 @@ const App = () => {
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col justify-center items-center">
       <h1 className="text-2xl font-bold mb-4">Flashcard App</h1>
-      <div className="bg-white p-6 rounded shadow-md w-96 text-center">
+      <div className="bg-white p-6 rounded shadow-md md:w-96 m-4 text-center">
         <p className="text-xl font-bold mb-4">{md.renderInline(question)}</p>
         <div className="flex flex-col gap-2">
           {options.map((option) => (
