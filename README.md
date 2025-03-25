@@ -4,6 +4,12 @@ This app helps you practice language questions from a markdown file formatted in
 
 ---
 
+### Why this app
+
+Well... I got bored during exams and wanted to make something. I was using flashcards to learn german so created this instead of obsidian. Made it easier to share the questions to others. It also helped me fetch an A now that the course is over so it was somewhat effective 😆.
+
+---
+
 ## **Usage Instructions**
 
 ### **1. Prepare Your Markdown File**
