@@ -1,6 +1,6 @@
-# Flashcard App - Learn Language with Callout Syntax
+# Flashcard App - Learn Anything with Callout Syntax
 
-This app helps you practice language questions from a markdown file formatted in a specific syntax. You can upload your file, review questions, select answers, and analyze mistakes. Here's how to use the app effectively:
+This app helps you practice anything from a markdown file formatted in a specific syntax. You can upload your file, review questions, select answers, and analyze mistakes. Here's how to use the app effectively:
 
 ---
 
@@ -68,18 +68,7 @@ Example:
 If you want to generate a new set of questions, use the following prompt with any Large Language Model (LLM):
 
 ```md
-I want you to generate 60 questions total comprising information from the above pdf in the following format:
-
-sentence **\_** rest of the sentence.
-
-The blank should be filled by the right pronoun/right form of the word/appropriate word/correctly conjugated word.
-
-For example:
-Wie Gefallt \_**\_ munchen?
-hast do \_\_** gefragt?
-ich mochte mit \_**\_ freundin ins Kino
-David fliegt flugzeuge. er is \_\_\_**
-Er hat \_\_\_\_ fuller zu hause vergessen?
+I want you to generate 60 questions total comprising information from the above information in the following format:
 
 They should be in this format:
 
@@ -102,6 +91,21 @@ For example:
 >
 > > [!success] - Answer
 > > a) Casa
+```
+
+If you are generating questions for a language, you can additionally use the following prompt to generate fill-in-the-blanks questions:
+
+```
+sentence **\_** rest of the sentence.
+
+The blank should be filled by the right pronoun/right form of the word/appropriate word/correctly conjugated word.
+
+For example:
+Wie Gefallt \_**\_ munchen?
+hast do \_\_** gefragt?
+ich mochte mit \_**\_ freundin ins Kino
+David fliegt flugzeuge. er is \_\_\_**
+Er hat \_\_\_\_ fuller zu hause vergessen?
 ```
 
 1. Provide the topics you want the questions to focus on.
